@@ -39,6 +39,8 @@ function User(name, username, email, phone, address, website, company, id = null
 const userHeaders = ['id', 'name', 'username', 'email', 'phone', 'website', 'address', 'company'];
 const postsHeaders = ['userId', 'id', 'title', 'body']
 
+const todoHeaders = ['userId', 'id', 'title', 'completed'];
+
 // containerElement is the element we want to render the table into
 // users is an array of objects representing user data
 function renderUserTable(users, containerElement) {
@@ -52,3 +54,10 @@ function renderPostsTable(posts, containerElement) {
     const table = tableManager.createTable(postsHeaders, posts);
     containerElement.replaceChildren(table);
 }
+
+function renderTodosTable(todos, containerElement) {
+    const tableManager = new TableManager();
+    const table = tableManager.createTable(todoHeaders, todos);
+    containerElement.replaceChildren(table);
+}
+
