@@ -37,11 +37,18 @@ function User(name, username, email, phone, address, website, company, id = null
 }
 
 const userHeaders = ['id', 'name', 'username', 'email', 'phone', 'website', 'address', 'company'];
+const postsHeaders = ['userId', 'id', 'title', 'body']
 
 // containerElement is the element we want to render the table into
 // users is an array of objects representing user data
 function renderUserTable(users, containerElement) {
     const tableManager = new TableManager();
     const table = tableManager.createTable(userHeaders, users);
+    containerElement.replaceChildren(table);
+}
+
+function renderPostsTable(posts, containerElement) {
+    const tableManager = new TableManager();
+    const table = tableManager.createTable(postsHeaders, posts);
     containerElement.replaceChildren(table);
 }
