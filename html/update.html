@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <nav>
         <a id="toggle">MENU</a>
@@ -17,22 +19,81 @@
         <a class="nav-link" href="#">UPDATE</a>
         <a class="nav-link" href="./delete.html">DELETE</a>
     </nav>
-    
+
     <header>
         <h1>Updating user accounts</h1>
         <p>Manage information concerning user accounts</p>
     </header>
-    
+
     <div class="container">
         <section id="banner">
             <h2>Status: <span id="status"></span></h2>
         </section>
+        <div id="data-table">
+
+        </div>
         <main class="container">
-            <div id="data-table">
-                
-            </div>
-            <form id="data-form">
-                <!-- TODO -->
+            <form id="data-form" class="container">
+                <fieldset id="user-id-field">
+                    <legend>User id</legend>
+                    <label for="id">ID:</label>
+                    <input type="number" name="id" id="id">
+                </fieldset>
+
+
+                <fieldset id="general-info">
+                    <legend>General information</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"><br>
+
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="phone">phone:</label>
+                    <input type="tel" id="phone" name="phone"><br>
+
+                    <label for="website">website:</label>
+                    <input type="text" id="website" name="website"><br>
+                </fieldset>
+
+                <fieldset id="address-details">
+                    <legend>Address details</legend>
+
+                    <label for="street">street:</label>
+                    <input type="text" id="street" name="street"><br>
+
+                    <label for="city">city:</label>
+                    <input type="text" id="city" name="city"><br>
+
+                    <label for="suite">suite:</label>
+                    <input type="text" id="suite" name="suite"><br>
+
+                    <label for="zipcode">zipcode:</label>
+                    <input type="text" id="zipcode" name="zipcode"><br>
+
+                    <label for="geo-lat">geo-latitude:</label>
+                    <input type="text" id="geo-lat" name="lat"><br>
+
+                    <label for="geo-long">geo-longitude:</label>
+                    <input type="text" id="geo-long" name="lng"><br>
+                </fieldset>
+
+                <fieldset id="company-details">
+                    <legend>Company details</legend>
+
+                    <label for="company-name">company name:</label>
+                    <input type="text" id="company-name" name="company-name"><br>
+
+                    <label for="bs">bs:</label>
+                    <input type="text" id="bs" name="bs"><br>
+
+                    <label for="catchPhrase">Catch phrase:</label>
+                    <input type="text" id="catch-phrase" name="catch-phrase"><br>
+                </fieldset>
 
                 <button type="submit">Submit</button>
             </form>
@@ -40,7 +101,7 @@
     </div>
 
     <footer>
-        <p><small>name here - Copyright &copy; 2022</small></p>
+        <p><small>Mohab Khalifa - Copyright &copy; 2022</small></p>
     </footer>
 
     <script src="../scripts/navbar.js"></script>
@@ -49,5 +110,10 @@
     <script src="../scripts/status-handler.js"></script>
     <script src="../scripts/users/user.js"></script>
     <script src="../scripts/users/update-user.js"></script>
+
+
+
+
 </body>
+
 </html>
