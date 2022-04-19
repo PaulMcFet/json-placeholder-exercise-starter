@@ -1,14 +1,12 @@
 (function() {
-    const requestSelector = document.querySelector('#method');
     const dataTable = document.querySelector('#data-table');
     const dataForm = document.querySelector('#data-form');
-    const userIdField = document.querySelector('#user-id-field');
     const id = document.querySelector('#id');
 
 function readById() {
     setStatus('PREPARING GET REQUEST');
 
-    fetch(`https://jsonplaceholder.typicode.com/users/${id.value}/comments`, {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id.value}/comments`, {
         method: 'GET'
     }).then(response => {
         setStatus('RECEIVED RESPONSE');
@@ -25,9 +23,6 @@ function readById() {
         handleError(error);
     });
 }
-    // default initialisation
-    readAll();
-
     dataForm.addEventListener('submit', function(event) {
         event.preventDefault(); // prevent default page refresh on form submission
         readById();
