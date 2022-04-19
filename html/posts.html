@@ -15,13 +15,13 @@
         <a class="nav-link" href="./create.html">CREATE</a>
         <a class="nav-link" href="./read.html">READ</a>
         <a class="nav-link" href="./update.html">UPDATE</a>
-        <a class="nav-link" href="#">DELETE</a>
+        <a class="nav-link" href="./delete.html">DELETE</a>
         <a class="nav-link" href="./posts.html">POSTS</a>
     </nav>
     
     <header>
-        <h1>Delete user accounts</h1>
-        <p>Deleting user accounts by their id</p>
+        <h1>User posts</h1>
+        <p>Display information concerning user posts</p>
     </header>
     
     <div class="container">
@@ -30,19 +30,23 @@
         </section>
         <main class="container">
             <form id="data-form">
+
+                
                 <fieldset id="user-id-field">
                     <legend>User id</legend>
                     <label for="id">ID:</label>
                     <input type="number" name="id" id="id">
                 </fieldset>
-
-                <button type="submit">Delete</button>
+                <button type="submit" style="width: 100%;">Submit</button>
             </form>
+            <div id="data-table">
+                
+            </div>
         </main>
     </div>
 
     <footer>
-        <p><small>name here - Copyright &copy; 2022</small></p>
+        <p><small>Lee is the best - Copyright &copy; 2022</small></p>
     </footer>
 
     <script src="../scripts/navbar.js"></script>
@@ -50,6 +54,6 @@
     <script src="../scripts/error-handler.js"></script>
     <script src="../scripts/status-handler.js"></script>
     <script src="../scripts/users/user.js"></script>
-    <script src="../scripts/users/delete-user.js"></script>
+    <script src="../scripts/users/posts-user.js"></script>
 </body>
 </html>

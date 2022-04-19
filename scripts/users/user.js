@@ -37,6 +37,7 @@ function User(name, username, email, phone, address, website, company, id = null
 }
 
 const userHeaders = ['id', 'name', 'username', 'email', 'phone', 'website', 'address', 'company'];
+const postsHeaders = ['userId', 'id', 'title', 'body']
 
 const todoHeaders = ['userId', 'id', 'title', 'completed'];
 
@@ -48,8 +49,15 @@ function renderUserTable(users, containerElement) {
     containerElement.replaceChildren(table);
 }
 
+function renderPostsTable(posts, containerElement) {
+    const tableManager = new TableManager();
+    const table = tableManager.createTable(postsHeaders, posts);
+    containerElement.replaceChildren(table);
+}
+
 function renderTodosTable(todos, containerElement) {
     const tableManager = new TableManager();
     const table = tableManager.createTable(todoHeaders, todos);
     containerElement.replaceChildren(table);
 }
+
